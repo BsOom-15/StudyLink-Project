@@ -34,70 +34,70 @@ const Contact = () => {
         }
     };
 
-    
     return (
         <div className="contact">
-        <div className="contact-container">
-            <div className="contact-info">
-                <div className="box">
-                    <div className="icon">
-                        <b></b><img src={address} alt="Location" />
+            <div className="contact-container">
+                <div className="contact-info">
+                    <div className="box">
+                        <div className="icon">
+                            <b></b><img src={address} alt="Location" />
+                        </div>
+                        <div className="text">
+                            <h3>Address</h3>
+                            <p>405544 Sugar Camp Road, <br /> San Francisco, <br />CA 94108</p>
+                        </div>
                     </div>
-                    <div className="text">
-                        <h3>Address</h3>
-                        <p>405544 Sugar Camp Road, <br /> San Francisco, <br />CA 94108</p>
+                    <div className="box">
+                        <div className="icon">
+                            <b></b><img src={phone} alt="Phone" />
+                        </div>
+                        <div className="text">
+                            <h3>Phone</h3>
+                            <p>000-000-0000</p>
+                        </div>
                     </div>
+                    <div className="box">
+                        <div className="icon">
+                            <b></b><img src={email} alt="Email" />
+                        </div>
+                        <div className="text">
+                            <h3>Email</h3>
+                            <p>bsoomnodemailer@gmail.com</p>
+                        </div>
+                    </div>
+                    <h2 className="txt">Connect With Us</h2>
+                    <ul className="social">
+                        <li><a href="#"><img src={facebock} alt="Facebook" /></a></li>
+                        <li><a href="#"><img src={twitter} alt="Twitter" /></a></li>
+                        <li><a href="#"><img src={insta} alt="Instagram" /></a></li>
+                        <li><a href="#"><img src={linkedin} alt="LinkedIn" /></a></li>
+                    </ul>
                 </div>
-                <div className="box">
-                    <div className="icon">
-                        <b></b><img src={phone} alt="Phone" />
-                    </div>
-                    <div className="text">
-                        <h3>Phone</h3>
-                        <p>000-000-0000</p>
-                    </div>
+
+                <div className="contact-form">
+                    <form onSubmit={onSubmit}>
+                        <h2>Contact us</h2>
+                        <div className="input-box">
+                            <input type="text" required name="name" />
+                            <span>Name</span>
+                        </div>
+                        <div className="input-box">
+                            <input type="email" required name="email" />
+                            <span>Email</span>
+                        </div>
+                        <div className="input-box">
+                            <textarea name="message" required></textarea>
+                            <span>Message</span>
+                        </div>
+                        <div className="input-box">
+                            <input type="submit" value="Send" />
+                        </div>
+                        <span className="span">{result}</span>
+                    </form>
                 </div>
-                <div className="box">
-                    <div className="icon">
-                        <b></b><img src={email} alt="Email" />
-                    </div>
-                    <div className="text">
-                        <h3>Email</h3>
-                        <p>bsoomnodemailer@gmail.com</p>
-                    </div>
-                </div>
-                <h2 className='txt'>Connect With Us</h2>
-                <ul className="social">
-                    <li><a href="#"><img src={facebock} alt="Facebook" /></a></li>
-                    <li><a href="#"><img src={twitter} alt="Twitter" /></a></li>
-                    <li><a href="#"><img src={insta} alt="Instagram" /></a></li>
-                    <li><a href="#"><img src={linkedin} alt="LinkedIn" /></a></li>
-                </ul>
             </div>
-            <div className="contact-form">
-                <form onSubmit={onSubmit}>
-                    <h2>Send a Message</h2>
-                    <div className="input-box">
-                        <input type="text" name="name" required />
-                        <span>Full Name</span>
-                    </div>
-                    <div className="input-box">
-                        <input type="email" name="email" required />
-                        <span>Your Email</span>
-                    </div>
-                    <div className="input-box">
-                        <textarea name="message" required></textarea>
-                        <span>Type Your Message...</span>
-                    </div>
-                    <div className="input-box">
-                        <input type="submit" value="Send" />
-                    </div>
-                    <span className='span'>{result}</span>
-                </form>
-            </div>
-        </div>
         </div>
     );
-};
+}
 
 export default Contact;

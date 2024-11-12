@@ -5,9 +5,15 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
     const [active, setActive] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = (index) => {
         setActive(index);
+        setMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
     };
 
     return (
@@ -17,7 +23,12 @@ const Navbar = () => {
             <img src={logo} alt="web-logo" />
             <h3>Study Link</h3>
             </div>
-            <ul>
+
+            <div className="hamburger" onClick={toggleMenu}>
+            &#9776;
+            </div>
+
+            <ul className={menuOpen ? "active" : ""}>
             <li
                 className={active === 0 ? "active" : ""}
                 onClick={() => handleClick(0)}
@@ -38,7 +49,7 @@ const Navbar = () => {
                 className={active === 2 ? "active" : ""}
                 onClick={() => handleClick(2)}
             >
-                    <Link to="about" smooth={true} offset={0} duration={500} aria-current={active === 3 ? 'page' : undefined}>
+                <Link to="about" smooth={true} offset={0} duration={500} aria-current={active === 3 ? 'page' : undefined}>
                 About
                 </Link>
             </li>
@@ -58,18 +69,6 @@ const Navbar = () => {
                 </button>
             </li>
             </ul>
-            {/* <div className="btn">
-            <button>
-                <Link to="signin" smooth={true} offset={0} duration={500}>
-                Sign In
-                </Link>
-            </button>
-            <button>
-                <Link to="signup" smooth={true} offset={0} duration={500}>
-                Sign Up
-                </Link>
-            </button>
-            </div> */}
         </div>
         </nav>
     );

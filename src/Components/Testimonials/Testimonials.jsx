@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons'; 
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './Testimonials.css';
 import qoute_left from '../../assets/quote-left.png';
 import testimonialsData from '../../assets/data/testimonialsData';
@@ -17,13 +17,21 @@ const Testimonials = () => {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={30}
-        slidesPerView={2}
+        slidesPerView={2} // Default to 2 slides on larger screens
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        autoplay={{ 
+        autoplay={{
           delay: 4000,
-          disableOnInteraction: false, 
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 1, // Show 1 slide per view on screens smaller than 768px
+          },
+          1024: {
+            slidesPerView: 2, // Show 2 slides per view on screens 1024px or larger
+          },
         }}
         onSwiper={(swiper) => console.log('Swiper instance:', swiper)}
         onSlideChange={() => console.log('Slide changed')}
