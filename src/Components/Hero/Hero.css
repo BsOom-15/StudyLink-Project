@@ -1,0 +1,110 @@
+.hero
+{
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.hero-container
+{
+    display: flex;
+    flex-direction: column;
+    content: " ";
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid blue; */
+    align-items: center;
+}
+
+.hero-up .hero-left video
+{
+    width: 95%;
+    border-radius: 4px;
+}
+
+.hero-container .hero-up
+{
+    display: flex;
+    align-items: center;
+    content: " ";
+    padding: 20px 30px;
+    margin: 60px;
+    position: relative;
+    top: 20px;
+}
+
+.hero-container .hero-up .hero-left
+{
+    padding-left: 15px;
+}
+
+.hero-container .hero-up .hero-right
+{
+    width: 100%;
+    padding-left: 50px;
+}
+
+.hero-up .hero-right h1
+{
+    font-size: 50px;
+}
+
+.hero-right .typing::after
+{
+    content: "Study Link";
+    animation-name: skill;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    font-size: 35px;
+}
+@keyframes skill {
+    0% { content: "|"; }
+    4% { content: "S|"; }
+    8% { content: "ST|"; }
+    12% { content: "STU|"; }
+    16% { content: "STUD|"; }
+    20% { content: "STUDY|"; }
+    24% { content: "STUDYL|"; }
+    28% { content: "STUDYLI|"; }
+    32% { content: "STUDYLIN|"; }
+    36% { content: "STUDYLINK|"; }
+    40% { content: "STUDYLIN|"; }
+    44% { content: "STUDYLI|"; }
+    48% { content: "STUDYL|"; }
+    52% { content: "STUDY|"; }
+    56% { content: "STUD|"; }
+    60% { content: "STU|"; }
+    64% { content: "ST|"; }
+    68% { content: "S|"; }
+    72% { content: "|"; }
+    100% { content: "|"; }
+}
+
+
+.hero-right .btn
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background: transparent;
+    color: #CCC9DC;
+    border: 2.5px solid #1B2A41;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero-right .btn:hover
+{
+    color: #324A5F;
+    border: 1px solid #CCC9DC;
+    
+}
+
+.btn img
+{
+    margin-left: 10px;
+}

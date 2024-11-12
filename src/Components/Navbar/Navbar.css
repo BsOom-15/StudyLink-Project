@@ -1,0 +1,158 @@
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+
+.logo-container
+{
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container .logo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container .logo img
+{
+    width: 50px;
+}
+
+.logo-container .logo h3
+{
+    padding-left: 8px;
+}
+
+.logo-container ul
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo-container ul li
+{
+    list-style: none;
+    cursor: pointer;
+    margin: 5px 20px;
+}
+
+.logo-container ul li button
+{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1B2A41;
+    font-size: 15px;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.logo-container ul li button:hover
+{
+    background: #CCC9DC;
+    color: #1B2A41;
+    transition: all 0.3s linear;
+}
+
+.logo-container .btn
+{
+    margin-right: 15px;
+}
+
+.logo-container .btn button:nth-child(1)
+{
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #1B2A41;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logo-container .btn button
+{
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1B2A41;
+    font-size: 15px;
+    color: #ffff;
+    cursor: pointer;
+}
+
+li.active {
+    position: relative;
+}
+
+li.active::after {
+    content: " ";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    background-color: #CCC9DC; 
+}
+
+
+
+@media (max-width: 800px) {
+    nav
+    {
+        padding: 10px 0px;
+    }
+
+    .logo-container .logo img
+    {
+    width: 25px;
+    }
+
+.logo-container .logo h3
+    {
+    padding-left: 5px;
+    font-size: 15px;
+    }
+
+    .logo-container ul
+    {
+        gap: 15px;
+        padding-right: 23px;
+    }
+
+    .logo-container ul li
+    {
+        font-size: 15px;
+    }
+
+    .logo-container ul li button
+    {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .container ul{
+        display: none;
+    }
+}
